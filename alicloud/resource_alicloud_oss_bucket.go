@@ -386,6 +386,7 @@ func resourceAlicloudOssBucket() *schema.Resource {
 }
 
 func resourceAlicloudOssBucketCreate(d *schema.ResourceData, meta interface{}) error {
+	//example test
 	client := meta.(*connectivity.AliyunClient)
 	request := map[string]string{"bucketName": d.Get("bucket").(string)}
 	var requestInfo *oss.Client
