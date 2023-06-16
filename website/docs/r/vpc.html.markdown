@@ -13,7 +13,7 @@ Provides a Vpc Vpc resource. A VPC instance creates a VPC. You can fully control
 
 -> **NOTE:** This resource will auto build a router and a route table while it uses `alicloud_vpc` to build a vpc resource. 
 
--> **NOTE:** Currently, the IPv4 / IPv6 dual-stack VPC function is under public testing. Only the following regions support IPv4 / IPv6 dual-stack VPC: `cn-hangzhou`, `cn-shanghai`, `cn-shenzhen`, `cn-beijing`, `cn-huhehaote`, `cn-hongkong` and `ap-southeast-1`, and need to apply for public beta qualification. To use, please [submit an application](https://help.aliyun.com/document_detail/100334.html).
+-> **NOTE:** Currently, the IPv4 / IPv6 dual-stack VPC function is under public testing. Only the following regions support IPv4 / IPv6 dual-stack VPC: `cn-hangzhou`, `cn-shanghai`, `cn-shenzhen`, `cn-beijing`, `cn-huhehaote`, `cn-hongkong` and `ap-southeast-1`, and need to apply for public beta qualification. To use, please [submit an application](https://www.alibabacloud.com/help/zh/vpc/getting-started/create-a-vpc-with-an-ipv6-cidr-block).
 
 ## Module Support
 
@@ -28,7 +28,7 @@ Basic Usage
 
 ```terraform
 variable "name" {
-  default = "terraform-example"
+  default = "terraform-vpc-example"
 }
 
 
@@ -87,7 +87,7 @@ The following attributes are exported:
 * `router_id` - The ID of the router created by default on VPC creation.
 * `status` - The status of the VPC. Valid values:  **Pending**: The VPC is being configured. **Available**: The VPC is available.
 
-### Timeouts
+# Timeouts
 
 The `timeouts` block allows you to specify [timeouts](https://www.terraform.io/docs/configuration-0-11/resources.html#timeouts) for certain actions:
 * `create` - (Defaults to 5 mins) Used when create the Vpc.
